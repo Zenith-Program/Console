@@ -3,6 +3,7 @@
 #include "BasicBuffer.h"
 namespace ZenithOS {
 	// Testing purposes ignore comment
+	// Added 1 more comment for testing
 	namespace Interpreter {
 		struct StrPos {
 			int_z start;
