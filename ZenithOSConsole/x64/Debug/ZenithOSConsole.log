@@ -1,0 +1,6 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (ZenithOSConsole10.vcxproj, ZenithOSConsole11.vcxproj, ZenithOSConsole12.vcxproj, ZenithOSConsole13.vcxproj, ZenithOSConsole14.vcxproj, ZenithOSConsole15.vcxproj, ZenithOSConsole16.vcxproj, ZenithOSConsole17.vcxproj, ZenithOSConsole18.vcxproj, ZenithOSConsole19.vcxproj, ZenithOSConsole20.vcxproj, ZenithOSConsole21.vcxproj, ZenithOSConsole.vcxproj, ZenithOSConsole1.vcxproj, ZenithOSConsole2.vcxproj, ZenithOSConsole3.vcxproj, ZenithOSConsole4.vcxproj, ZenithOSConsole5.vcxproj, ZenithOSConsole6.vcxproj, ZenithOSConsole7.vcxproj, ZenithOSConsole8.vcxproj, ZenithOSConsole9.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Program2.cpp
+  VSBuffer.cpp
+C:\Users\natha\source\repos\ZenithOSConsole\ZenithOSConsole\VSBuffer.cpp(28,16): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  ZenithOSConsole.vcxproj -> C:\Users\natha\source\repos\ZenithOSConsole\x64\Debug\ZenithOSConsole22.exe

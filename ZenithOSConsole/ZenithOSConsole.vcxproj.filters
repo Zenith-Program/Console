@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Implementations">
+      <UniqueIdentifier>{a3cac8d5-64f2-4487-8a60-0f7669d323a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Implementations">
+      <UniqueIdentifier>{b682cfa6-ff1b-4f9e-8452-5cb5d5e67b4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Console">
+      <UniqueIdentifier>{32c686e0-647d-421d-847f-c2ef3c984427}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\System">
+      <UniqueIdentifier>{16473521-3a66-45e4-96a8-275ab3c27237}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ProgramList">
+      <UniqueIdentifier>{3ebe9306-8115-4d07-96b2-544338de8ac9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Console">
+      <UniqueIdentifier>{e05fc36b-a631-4480-9fb1-4dd638f02062}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Program List">
+      <UniqueIdentifier>{6ca123d9-3ff1-407a-a421-cad13d285067}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\ProgramList">
+      <UniqueIdentifier>{683334a5-ae48-4a81-88a3-835363ffd018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Programs">
+      <UniqueIdentifier>{0166f9ac-f1a4-4078-a9dd-06632c10f878}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Configuration Files">
+      <UniqueIdentifier>{612afd36-af3e-4501-acf8-d6b82b4aadd3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VSBuffer.cpp">
+      <Filter>Source Files\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleToken.cpp">
+      <Filter>Source Files\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="Program1.cpp">
+      <Filter>Source Files\Programs</Filter>
+    </ClCompile>
+    <ClCompile Include="Program2.cpp">
+      <Filter>Source Files\Programs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="VSBuffer.h">
+      <Filter>Header Files\Implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicBuffer.h">
+      <Filter>Header Files\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandList.h">
+      <Filter>Header Files\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleInterpreter.h">
+      <Filter>Header Files\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleToken.h">
+      <Filter>Header Files\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="ZenithOSProgramListConfigHeader.h">
+      <Filter>Header Files\ProgramList</Filter>
+    </ClInclude>
+    <ClInclude Include="ZenithOSProgramListConfig.h">
+      <Filter>Configuration Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemConfig.h">
+      <Filter>Configuration Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZenithOSProgramEntryPoint.hpp">
+      <Filter>Header Files\ProgramList</Filter>
+    </ClInclude>
+    <ClInclude Include="ZenithOSProgramList.h">
+      <Filter>Header Files\ProgramList</Filter>
+    </ClInclude>
+    <ClInclude Include="ZenithOSCommandList.h">
+      <Filter>Header Files\ProgramList</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
