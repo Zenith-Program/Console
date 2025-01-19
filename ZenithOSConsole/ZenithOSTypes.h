@@ -1,5 +1,5 @@
 #pragma once
-#include "SystemConfig.h"
+#include "ZenithOSSystem.cfg.h"
 
 namespace ZenithOS {
 	using uint_z = ZenithOS_uintType;

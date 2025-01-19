@@ -24,7 +24,7 @@
     <ProjectGuid>{f15a8e98-1337-4b63-b96d-323a553cb353}</ProjectGuid>
     <RootNamespace>ZenithOSConsole</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>ZenithOSConsole22</ProjectName>
+    <ProjectName>ZenithOSConsole26</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -105,6 +105,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,18 +136,22 @@
     <ClCompile Include="VSBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BasicBuffer.h" />
+    <ClInclude Include="BasicCircularBuffer.h" />
     <ClInclude Include="CommandList.h" />
     <ClInclude Include="ConsoleInterpreter.h" />
     <ClInclude Include="ConsoleToken.h" />
-    <ClInclude Include="SystemConfig.h" />
-    <ClInclude Include="Types.h" />
+    <ClInclude Include="ZenithOSCommandList.hpp" />
+    <ClInclude Include="ZenithOSProgramList.hpp" />
+    <ClInclude Include="ZenithOSProgramSetCommandList.hpp" />
+    <ClInclude Include="ZenithOSSystem.cfg.h" />
+    <ClInclude Include="ZenithOSTypes.h" />
     <ClInclude Include="VSBuffer.h" />
     <ClInclude Include="ZenithOSCommandList.h" />
     <ClInclude Include="ZenithOSProgramEntryPoint.hpp" />
     <ClInclude Include="ZenithOSProgramList.h" />
-    <ClInclude Include="ZenithOSProgramListConfig.h" />
+    <ClInclude Include="ZenithOSProgramList.cfg.h" />
     <ClInclude Include="ZenithOSProgramListConfigHeader.h" />
+    <ClInclude Include="ZenithOSProgramErrorCodes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,7 +1,7 @@
 #pragma once
 #include "ConsoleToken.h"
 #include "CommandList.h"
-#include "BasicBuffer.h"
+#include "BasicCircularBuffer.h"
 #include <cstdio>
 
 namespace ZenithOS{

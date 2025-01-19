@@ -1,5 +1,5 @@
 #pragma once
-#include "BasicBuffer.h"
+#include "BasicCircularBuffer.h"
 
 #define VSBufferSize 128
 

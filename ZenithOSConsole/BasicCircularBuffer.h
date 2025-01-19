@@ -1,5 +1,5 @@
 #pragma once
-#include "Types.h"
+#include "ZenithOSTypes.h"
 
 namespace ZenithOS {
 	class BasicBuffer {

@@ -1,9 +1,7 @@
 #pragma once
-#include "types.h"
-#include "BasicBuffer.h"
+#include "ZenithOSTypes.h"
+#include "BasicCircularBuffer.h"
 namespace ZenithOS {
-	// Testing purposes ignore comment
-	// Added 1 more comment for testing
 	namespace Interpreter {
 		struct StrPos {
 			int_z start;

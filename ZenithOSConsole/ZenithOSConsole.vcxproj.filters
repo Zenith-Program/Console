@@ -65,7 +65,7 @@
     <ClInclude Include="VSBuffer.h">
       <Filter>Header Files\Implementations</Filter>
     </ClInclude>
-    <ClInclude Include="BasicBuffer.h">
+    <ClInclude Include="BasicCircularBuffer.h">
       <Filter>Header Files\Console</Filter>
     </ClInclude>
     <ClInclude Include="CommandList.h">
@@ -77,16 +77,16 @@
     <ClInclude Include="ConsoleToken.h">
       <Filter>Header Files\Console</Filter>
     </ClInclude>
-    <ClInclude Include="Types.h">
+    <ClInclude Include="ZenithOSTypes.h">
       <Filter>Header Files\System</Filter>
     </ClInclude>
     <ClInclude Include="ZenithOSProgramListConfigHeader.h">
       <Filter>Header Files\ProgramList</Filter>
     </ClInclude>
-    <ClInclude Include="ZenithOSProgramListConfig.h">
+    <ClInclude Include="ZenithOSProgramList.cfg.h">
       <Filter>Configuration Files</Filter>
     </ClInclude>
-    <ClInclude Include="SystemConfig.h">
+    <ClInclude Include="ZenithOSSystem.cfg.h">
       <Filter>Configuration Files</Filter>
     </ClInclude>
     <ClInclude Include="ZenithOSProgramEntryPoint.hpp">
@@ -96,6 +96,18 @@
       <Filter>Header Files\ProgramList</Filter>
     </ClInclude>
     <ClInclude Include="ZenithOSCommandList.h">
+      <Filter>Header Files\ProgramList</Filter>
+    </ClInclude>
+    <ClInclude Include="ZenithOSProgramList.hpp">
+      <Filter>Source Files\Program List</Filter>
+    </ClInclude>
+    <ClInclude Include="ZenithOSProgramErrorCodes.h">
+      <Filter>Header Files\ProgramList</Filter>
+    </ClInclude>
+    <ClInclude Include="ZenithOSCommandList.hpp">
+      <Filter>Source Files\Program List</Filter>
+    </ClInclude>
+    <ClInclude Include="ZenithOSProgramSetCommandList.hpp">
       <Filter>Header Files\ProgramList</Filter>
     </ClInclude>
   </ItemGroup>
