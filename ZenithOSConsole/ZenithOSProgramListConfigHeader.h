@@ -28,31 +28,27 @@ static_assert(false, "Program priority 0 is reserved for ZenithOS. ZenithOS_Defu
 #endif
 
 
-#define ZenithOS_DeclareProgramSlot(n, name, listSize) \
+#define ZenithOS_DeclareProgramSlot(n, name) \
 static_assert(ZenithOS_ProgramListSize > 0, "ZenithOS_ProgramListSize must be greater than 0");\
 static_assert(n<ZenithOS_ProgramListSize, "Cannot declare program for a slot outside the size of the program list. use ZenithOS_PROGRAM_SIZE_LIST to change the size");\
 static_assert(ZenithOS_DefaultProgramPriority>0, "Program priority 0 is reserved for ZenithOS. ZenithOS_DefualtProgramPriority cannot be <1");\
-static_assert(listSize>0, "Command list size must be positive");\
 extern template ZenithOS::int_z ZenithOS::ProgramList::ProgramStartup<n>();\
 extern template void ZenithOS::ProgramList::ProgramLoop<n>();\
 extern template ZenithOS::int_z ZenithOS::ProgramList::ProgramShutdown<n>();\
 template<> const char* ZenithOS::ProgramList::ProgramName<n> = name;\
 template<> const ZenithOS::uint_z ZenithOS::ProgramList::ProgramPriority<n> = ZenithOS_DefaultProgramPriority;\
-extern ZenithOS::ProgramList::StaticCommandList<listSize> ProgramCommandList##n;\
-template<> ZenithOS::ProgramList::CommandList* ZenithOS::ProgramList::ProgramCommandList<n> = &ProgramCommandList##n;
+extern template ZenithOS::ProgramList::CommandList* ZenithOS::ProgramList::ProgramCommandList<n>;
 
-#define ZenithOS_DeclareProgramSlotWithPriority(n, name, listSize, priority)\
+#define ZenithOS_DeclareProgramSlotWithPriority(n, name, priority)\
 static_assert(ZenithOS_ProgramListSize > 0, "ZenithOS_ProgramListSize must be greater than 0");\
 static_assert(n<ZenithOS_ProgramListSize, "Cannot declare program for a slot outside the size of the program list. use ZenithOS_PROGRAM_SIZE_LIST to change the size");\
 static_assert(priority>0, "Program priority 0 is reserved for ZenithOS");\
-static_assert(listSize>0, "Command list size must be positive");\
 extern template ZenithOS::int_z ZenithOS::ProgramList::ProgramStartup<n>();\
 extern template void ZenithOS::ProgramList::ProgramLoop<n>();\
 extern template ZenithOS::int_z ZenithOS::ProgramList::ProgramShutdown<n>();\
 template<> const char* ZenithOS::ProgramList::ProgramName<n> = name;\
 template<> ZenithOS::uint_z ZenithOS::ProgramList::ProgramPriority<n> = priority;\
-extern ZenithOS::ProgramList::StaticCommandList<listSize> ProgramCommandList##n;\
-template<> ZenithOS::ProgramList::CommandList* ZenithOS::ProgramList::ProgramCommandList<n> = &ProgramCommandList##n;
+extern template ZenithOS::ProgramList::CommandList* ZenithOS::ProgramList::ProgramCommandList<n>;
 
 /*ZenithOS_ProgramListConfigHeader.h-----------
 * This file defines the macro that the user uses in the ZenithOSProgramConfig.h configuration file to define each program's data

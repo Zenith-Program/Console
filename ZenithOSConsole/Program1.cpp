@@ -1,12 +1,16 @@
 #define ZenithOS_UseProgramSlot 0
+#define ZenithOS_CommandListSize 1
 #include "ZenithOSProgramEntryPoint.hpp"
 #include "ZenithOSProgramSetCommandList.hpp"
 
+//ZenithOS_ProgramCommandList = {NextCommand{"Command1", "f", nullptr}};
+//ZenithOS_RegisterProgramCommandList
+
+
 #include <iostream>
 
-ZenithOS::ProgramList::StaticCommandList<1> ProgramCommandList0 = { ZenithOS::ProgramList::Command({"Command1", "f", nullptr}) };
-
 Startup() {
+	std::cout << "adress: " << &ProgramCommandList_0 << std::endl;
 	std::cout << "Start of program 0" << std::endl;
 	return 0;
 }

@@ -9,7 +9,7 @@
 template <ZenithOS::int_z size> constexpr ZenithOS::ProgramList::ProgramList<size>::ProgramList() : programs(initProgramData(std::make_index_sequence<size>())), currentThread(-1) {}
 
 template <ZenithOS::int_z size> template<std::size_t... I> constexpr std::array<ZenithOS::ProgramList::ProgramData, size> ZenithOS::ProgramList::ProgramList<size>::initProgramData(std::index_sequence<I...> a) {
-	return { ProgramData{ProgramName<I>, &ProgramStartup<I>, &ProgramLoop<I>, &ProgramShutdown<I>, nullptr, ProgramPriority<I>, 0 }... };
+	return { ProgramData{ProgramName<I>, &ProgramStartup<I>, &ProgramLoop<I>, &ProgramShutdown<I>, ProgramCommandList<I>, ProgramPriority<I>, 0 }... };
 }
 
 //program execution

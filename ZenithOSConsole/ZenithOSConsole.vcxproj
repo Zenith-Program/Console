@@ -140,6 +140,7 @@
     <ClInclude Include="CommandList.h" />
     <ClInclude Include="ConsoleInterpreter.h" />
     <ClInclude Include="ConsoleToken.h" />
+    <ClInclude Include="Program2CommandList.h" />
     <ClInclude Include="ZenithOSCommandList.hpp" />
     <ClInclude Include="ZenithOSProgramList.hpp" />
     <ClInclude Include="ZenithOSProgramSetCommandList.hpp" />

@@ -13,11 +13,11 @@ Token token;
 char printBuffer[64];
 
 int main() {
-	constexpr ZenithOS::ProgramList::StaticCommandList<2> list = { ZenithOS::ProgramList::Command({"Command1", "if", nullptr}), ZenithOS::ProgramList::Command({"Command2", "wi", nullptr}) };
 	ZenithOS::ProgramList::ProgramLedger ledger = ZenithOS::ProgramList::getProgramList();
-
-	std::cout << list.getCommandIndex("Command1") << ' ' << list.getCommandIndex("Focus") << std::endl;
-	std::cout << list.getArgumentsList(0) << ' ' << list.getArgumentsList(1) << std::endl;
+	const ZenithOS::ProgramList::CommandList* list = ledger.getProgramCommandList(0);
+	ledger.startProgram(0);
+	std::cout << list->getCommandIndex("Command1") << ' ' << list->getCommandIndex("Focus") << std::endl;
+	std::cout << list->getArgumentsList(0) << ' ' << list->getArgumentsList(1) << std::endl;
 	//ledger.initProgramData();
 	std::cout << ledger.getProgramName(0) << std::endl;
 	std::cout << ledger.getProgramName(1) << std::endl;

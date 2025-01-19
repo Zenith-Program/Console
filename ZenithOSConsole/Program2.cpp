@@ -1,5 +1,12 @@
 #define ZenithOS_UseProgramSlot 1
+#define ZenithOS_CommandListSize 2
 #include "ZenithOSProgramEntryPoint.hpp"
+#include "ZenithOSProgramSetCommandList.hpp"
+
+ZenithOS_ProgramCommandList = { NextCommand{"t", "", nullptr}, NextCommand{"f", "", nullptr} };
+ZenithOS_RegisterProgramCommandList
+
+
 
 #include <iostream>
 

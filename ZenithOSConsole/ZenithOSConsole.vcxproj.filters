@@ -43,6 +43,9 @@
     <Filter Include="Configuration Files">
       <UniqueIdentifier>{612afd36-af3e-4501-acf8-d6b82b4aadd3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Programs">
+      <UniqueIdentifier>{3dadd214-27db-4d47-ab05-4843991a7698}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -109,6 +112,9 @@
     </ClInclude>
     <ClInclude Include="ZenithOSProgramSetCommandList.hpp">
       <Filter>Header Files\ProgramList</Filter>
+    </ClInclude>
+    <ClInclude Include="Program2CommandList.h">
+      <Filter>Header Files\Programs</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
