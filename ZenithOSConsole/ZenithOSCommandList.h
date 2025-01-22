@@ -23,6 +23,7 @@ namespace ZenithOS {
 		
 			//template<typename... T, typename = std::enable_if_t<sizeof...(T) == size>> constexpr StaticCommandList(T... values) : commands{ values... } {}
 			template<typename... T, typename = std::enable_if_t<sizeof...(T) == size>> constexpr StaticCommandList(T... values);
+			//StaticCommandList() = default;
 			int_z getCommandIndex(const char*) const override;
 			const char* getArgumentsList(int_z) const override;
 			const char* (*getFunction(int_z) const)(ZenithOS::Interpreter::Token*) override;

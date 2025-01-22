@@ -2,6 +2,9 @@
 #include "ZenithOSTypes.h"
 #include "ZenithOSCommandList.h"
 
+#define ZenithOS_Concat(a,b) a##b
+#define ZenithOS_ExpandAndConcat(a,b) ZenithOS_Concat(a,b)
+
 namespace ZenithOS {
 	namespace ProgramList {
 		template<int_z> int_z ProgramStartup();
@@ -9,7 +12,7 @@ namespace ZenithOS {
 		template<int_z> int_z ProgramShutdown();
 		template<int_z> const char* ProgramName;
 		template<int_z> uint_z ProgramPriority;
-		template<int_z> CommandList* ProgramCommandList;
+		template<int_z, int_z b> StaticCommandList<b> ProgramCommandList;
 	}
 }
 
@@ -37,7 +40,9 @@ extern template void ZenithOS::ProgramList::ProgramLoop<n>();\
 extern template ZenithOS::int_z ZenithOS::ProgramList::ProgramShutdown<n>();\
 template<> const char* ZenithOS::ProgramList::ProgramName<n> = name;\
 template<> const ZenithOS::uint_z ZenithOS::ProgramList::ProgramPriority<n> = ZenithOS_DefaultProgramPriority;\
-extern template ZenithOS::ProgramList::CommandList* ZenithOS::ProgramList::ProgramCommandList<n>;
+extern template ZenithOS::ProgramList::StaticCommandList<ZOS_getSize(n)> ZenithOS::ProgramList::ProgramCommandList<n, ZOS_getSize(n)>;
+
+
 
 #define ZenithOS_DeclareProgramSlotWithPriority(n, name, priority)\
 static_assert(ZenithOS_ProgramListSize > 0, "ZenithOS_ProgramListSize must be greater than 0");\
@@ -48,7 +53,13 @@ extern template void ZenithOS::ProgramList::ProgramLoop<n>();\
 extern template ZenithOS::int_z ZenithOS::ProgramList::ProgramShutdown<n>();\
 template<> const char* ZenithOS::ProgramList::ProgramName<n> = name;\
 template<> ZenithOS::uint_z ZenithOS::ProgramList::ProgramPriority<n> = priority;\
-extern template ZenithOS::ProgramList::CommandList* ZenithOS::ProgramList::ProgramCommandList<n>;
+extern template ZenithOS::ProgramList::StaticCommandList<ZOS_getSize(n)> ZenithOS::ProgramList::ProgramCommandList<n, ZOS_getSize(n)>;
+
+#define ZenithOS_DeclareCommandListSizes constexpr ZenithOS::int_z ZenithOS_CommandListSizes[ZenithOS_ProgramListSize]
+
+
+
+
 
 /*ZenithOS_ProgramListConfigHeader.h-----------
 * This file defines the macro that the user uses in the ZenithOSProgramConfig.h configuration file to define each program's data

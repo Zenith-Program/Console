@@ -3,14 +3,12 @@
 #include "ZenithOSProgramEntryPoint.hpp"
 #include "ZenithOSProgramSetCommandList.hpp"
 
-//ZenithOS_ProgramCommandList = {NextCommand{"Command1", "f", nullptr}};
-//ZenithOS_RegisterProgramCommandList
+ZenithOS_ProgramCommandList = StartList{NextCommand{"Command1", "f", nullptr}};
 
 
 #include <iostream>
 
 Startup() {
-	std::cout << "adress: " << &ProgramCommandList_0 << std::endl;
 	std::cout << "Start of program 0" << std::endl;
 	return 0;
 }

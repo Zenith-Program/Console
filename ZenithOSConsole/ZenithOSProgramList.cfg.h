@@ -2,8 +2,17 @@
 #define ZenithOS_ProgramListSize 2
 #define ZenithOS_DefaultProgramPriority 1
 #include "ZenithOSProgramListConfigHeader.h"
+ZenithOS_DeclareCommandListSizes = { 1,2 };
+
+constexpr int ZOS_getSize(int i) {
+	return ZenithOS_CommandListSizes[i];
+}
+
 ZenithOS_DeclareProgramSlot(0, "Program1")
 ZenithOS_DeclareProgramSlotWithPriority(1, "Program2", 2)
+
+
+
 
 /* ZenithOS ProgramListConfig.h----------------
 * This file should be modified by the user to choose the program list size and declare it's programs
@@ -20,5 +29,5 @@ ZenithOS_DeclareProgramSlotWithPriority(1, "Program2", 2)
 * #define ZenithOS_ProgramListSize 2
 * #include "ZenithOSProgramListConfigHeader.h"
 * ZenithOS_DeclareProgramSlot(0, "Program1")
-* ZenithOS_DeclareProgramSlotWithPriority(1, "Program2", 2)
+* ZenithOS_DeclareProgramSlotWithPriorit(1, "Program2", 2)
 */

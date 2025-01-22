@@ -3,10 +3,7 @@
 #include "ZenithOSProgramEntryPoint.hpp"
 #include "ZenithOSProgramSetCommandList.hpp"
 
-ZenithOS_ProgramCommandList = { NextCommand{"t", "", nullptr}, NextCommand{"f", "", nullptr} };
-ZenithOS_RegisterProgramCommandList
-
-
+ZenithOS_ProgramCommandList = StartList{ NextCommand{"t", "", nullptr}, NextCommand{"f", "", nullptr} };
 
 #include <iostream>
 
