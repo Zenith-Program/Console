@@ -1,9 +1,9 @@
-#define ZenithOS_UseProgramSlot 0
-#define ZenithOS_CommandListSize 1
+#define ZenithOS_ProgramID ProgramA
 #include "ZenithOSProgramEntryPoint.hpp"
 #include "ZenithOSProgramSetCommandList.hpp"
 
-ZenithOS_ProgramCommandList = StartList{NextCommand{"Command1", "f", nullptr}};
+ZenithOS_ProgramCommandList = { {"aa", "bb", nullptr}, {"ab", "ff", nullptr} };
+
 
 
 #include <iostream>

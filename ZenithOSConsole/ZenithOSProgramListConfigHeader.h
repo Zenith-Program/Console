@@ -12,7 +12,7 @@ namespace ZenithOS {
 		template<int_z> int_z ProgramShutdown();
 		template<int_z> const char* ProgramName;
 		template<int_z> uint_z ProgramPriority;
-		template<int_z, int_z b> StaticCommandList<b> ProgramCommandList;
+		template<int_z> CommandList ProgramCommandList;
 	}
 }
 
@@ -30,6 +30,15 @@ static_assert(false, "Program priority 0 is reserved for ZenithOS. ZenithOS_Defu
 #endif
 #endif
 
+#ifndef ZenithOS_CommandListSize
+#define ZenithOS_CommandListSize 1
+#else
+#if ZenithOS_CommandListSize <1
+static_assert(false, "Command list size must be positive");
+#endif
+#endif // !ZenithOS_CommandListSize
+
+
 
 #define ZenithOS_DeclareProgramSlot(n, name) \
 static_assert(ZenithOS_ProgramListSize > 0, "ZenithOS_ProgramListSize must be greater than 0");\
@@ -39,8 +48,7 @@ extern template ZenithOS::int_z ZenithOS::ProgramList::ProgramStartup<n>();\
 extern template void ZenithOS::ProgramList::ProgramLoop<n>();\
 extern template ZenithOS::int_z ZenithOS::ProgramList::ProgramShutdown<n>();\
 template<> const char* ZenithOS::ProgramList::ProgramName<n> = name;\
-template<> const ZenithOS::uint_z ZenithOS::ProgramList::ProgramPriority<n> = ZenithOS_DefaultProgramPriority;\
-extern template ZenithOS::ProgramList::StaticCommandList<ZOS_getSize(n)> ZenithOS::ProgramList::ProgramCommandList<n, ZOS_getSize(n)>;
+template<> const ZenithOS::uint_z ZenithOS::ProgramList::ProgramPriority<n> = ZenithOS_DefaultProgramPriority;
 
 
 
@@ -52,10 +60,7 @@ extern template ZenithOS::int_z ZenithOS::ProgramList::ProgramStartup<n>();\
 extern template void ZenithOS::ProgramList::ProgramLoop<n>();\
 extern template ZenithOS::int_z ZenithOS::ProgramList::ProgramShutdown<n>();\
 template<> const char* ZenithOS::ProgramList::ProgramName<n> = name;\
-template<> ZenithOS::uint_z ZenithOS::ProgramList::ProgramPriority<n> = priority;\
-extern template ZenithOS::ProgramList::StaticCommandList<ZOS_getSize(n)> ZenithOS::ProgramList::ProgramCommandList<n, ZOS_getSize(n)>;
-
-#define ZenithOS_DeclareCommandListSizes constexpr ZenithOS::int_z ZenithOS_CommandListSizes[ZenithOS_ProgramListSize]
+template<> ZenithOS::uint_z ZenithOS::ProgramList::ProgramPriority<n> = priority;
 
 
 

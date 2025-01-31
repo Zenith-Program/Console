@@ -1,13 +1,11 @@
 #pragma once
 #define ZenithOS_ProgramListSize 2
 #define ZenithOS_DefaultProgramPriority 1
+#define ZenithOS_CommandListSize 1
 #include "ZenithOSProgramListConfigHeader.h"
-ZenithOS_DeclareCommandListSizes = { 1,2 };
 
-constexpr int ZOS_getSize(int i) {
-	return ZenithOS_CommandListSizes[i];
-}
-
+#define ProgramA 0
+#define ProgramB 1
 ZenithOS_DeclareProgramSlot(0, "Program1")
 ZenithOS_DeclareProgramSlotWithPriority(1, "Program2", 2)
 

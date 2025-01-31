@@ -1,27 +1,111 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (ZenithOSConsole10.vcxproj, ZenithOSConsole11.vcxproj, ZenithOSConsole12.vcxproj, ZenithOSConsole13.vcxproj, ZenithOSConsole14.vcxproj, ZenithOSConsole15.vcxproj, ZenithOSConsole16.vcxproj, ZenithOSConsole17.vcxproj, ZenithOSConsole18.vcxproj, ZenithOSConsole19.vcxproj, ZenithOSConsole20.vcxproj, ZenithOSConsole21.vcxproj, ZenithOSConsole22.vcxproj, ZenithOSConsole23.vcxproj, ZenithOSConsole24.vcxproj, ZenithOSConsole25.vcxproj, ZenithOSConsole.vcxproj, ZenithOSConsole1.vcxproj, ZenithOSConsole2.vcxproj, ZenithOSConsole3.vcxproj, ZenithOSConsole4.vcxproj, ZenithOSConsole5.vcxproj, ZenithOSConsole6.vcxproj, ZenithOSConsole7.vcxproj, ZenithOSConsole8.vcxproj, ZenithOSConsole9.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Program1.cpp
-  Program2.cpp
+  ConsoleToken.cpp
   main.cpp
-C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramListConfigHeader.h(15,49): error C2512: 'ZenithOS::ProgramList::StaticCommandList<1>::StaticCommandList': no appropriate default constructor available
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ConsoleToken.cpp(329,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ConsoleToken.cpp(336,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramListConfigHeader.h(15,31): error C2061: syntax error: identifier 'ProgramCommandList'
   (compiling source file 'main.cpp')
-      C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSCommandList.h(25,79):
-      could be 'ZenithOS::ProgramList::StaticCommandList<1>::StaticCommandList(T...)'
-          C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramListConfigHeader.h(15,49):
-          'ZenithOS::ProgramList::StaticCommandList<1>::StaticCommandList(T...)': could not deduce template argument for '<unnamed-symbol>'
-              C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSCommandList.h(25,44):
-              'std::enable_if_t<false,void>' : Failed to specialize alias template
-      C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramListConfigHeader.h(15,49):
-      while trying to match the argument list '()'
   
-C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramListConfigHeader.h(15,49): error C2512: 'ZenithOS::ProgramList::StaticCommandList<2>::StaticCommandList': no appropriate default constructor available
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSCommandList.hpp(5,90): warning C4812: obsolete declaration style: please use 'ZenithOS::ProgramList::StaticCommandList<size>::StaticCommandList' instead
   (compiling source file 'main.cpp')
-      C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSCommandList.h(25,79):
-      could be 'ZenithOS::ProgramList::StaticCommandList<2>::StaticCommandList(T...)'
-          C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramListConfigHeader.h(15,49):
-          'ZenithOS::ProgramList::StaticCommandList<2>::StaticCommandList(T...)': could not deduce template argument for '<unnamed-symbol>'
-              C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSCommandList.h(25,44):
-              'std::enable_if_t<false,void>' : Failed to specialize alias template
-      C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramListConfigHeader.h(15,49):
-      while trying to match the argument list '()'
   
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.hpp(12,98): error C2065: 'ProgramCommandList': undeclared identifier
+  (compiling source file 'main.cpp')
+      C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.h(44,78):
+      This diagnostic occurred in the compiler generated function 'std::array<ZenithOS::ProgramList::ProgramData,size> ZenithOS::ProgramList::ProgramList<size>::initProgramData(std::integer_sequence<size_t,I...>)'
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.hpp(12,119): error C2760: syntax error: ',' was unexpected here; expected 'expression'
+  (compiling source file 'main.cpp')
+      C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.h(44,78):
+      This diagnostic occurred in the compiler generated function 'std::array<ZenithOS::ProgramList::ProgramData,size> ZenithOS::ProgramList::ProgramList<size>::initProgramData(std::integer_sequence<size_t,I...>)'
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.hpp(12,119): error C2760: syntax error: ',' was unexpected here; expected ';'
+  (compiling source file 'main.cpp')
+      C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.h(44,78):
+      This diagnostic occurred in the compiler generated function 'std::array<ZenithOS::ProgramList::ProgramData,size> ZenithOS::ProgramList::ProgramList<size>::initProgramData(std::integer_sequence<size_t,I...>)'
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.hpp(12,119): error C3878: syntax error: unexpected token ',' following 'jump-statement'
+  (compiling source file 'main.cpp')
+      C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.h(44,78):
+      This diagnostic occurred in the compiler generated function 'std::array<ZenithOS::ProgramList::ProgramData,size> ZenithOS::ProgramList::ProgramList<size>::initProgramData(std::integer_sequence<size_t,I...>)'
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.hpp(12,119): message : error recovery skipped: ','
+  (compiling source file 'main.cpp')
+      C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.h(44,78):
+      This diagnostic occurred in the compiler generated function 'std::array<ZenithOS::ProgramList::ProgramData,size> ZenithOS::ProgramList::ProgramList<size>::initProgramData(std::integer_sequence<size_t,I...>)'
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.hpp(12,142): error C2760: syntax error: '}' was unexpected here; expected ';'
+  (compiling source file 'main.cpp')
+      C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.h(44,78):
+      This diagnostic occurred in the compiler generated function 'std::array<ZenithOS::ProgramList::ProgramData,size> ZenithOS::ProgramList::ProgramList<size>::initProgramData(std::integer_sequence<size_t,I...>)'
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.hpp(12,119): error C2059: syntax error: ','
+  (compiling source file 'main.cpp')
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.hpp(12,1): error C2059: syntax error: ','
+  (compiling source file 'main.cpp')
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.hpp(12,22): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'main.cpp')
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.hpp(12,22): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'main.cpp')
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.hpp(12,146): error C2059: syntax error: '}'
+  (compiling source file 'main.cpp')
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.hpp(13,1): error C2059: syntax error: '}'
+  (compiling source file 'main.cpp')
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.hpp(13,1): error C2143: syntax error: missing ';' before '}'
+  (compiling source file 'main.cpp')
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.hpp(96,1): error C2059: syntax error: '}'
+  (compiling source file 'main.cpp')
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.hpp(96,1): error C2143: syntax error: missing ';' before '}'
+  (compiling source file 'main.cpp')
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\main.cpp(38,1): error C1903: unable to recover from previous error(s); stopping compilation
+  Program1.cpp
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSCommandList.hpp(5,90): warning C4812: obsolete declaration style: please use 'ZenithOS::ProgramList::StaticCommandList<size>::StaticCommandList' instead
+  (compiling source file 'Program1.cpp')
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSCommandList.hpp(5,90): warning C4812: obsolete declaration style: please use 'ZenithOS::ProgramList::StaticCommandList<1>::StaticCommandList' instead
+  (compiling source file 'Program1.cpp')
+      C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSCommandList.hpp(5,90):
+      the template instantiation context (the oldest one first) is
+          C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSCommandList.hpp(5,174):
+          see reference to function template instantiation 'ZenithOS::ProgramList::StaticCommandList<1>::StaticCommandList(std::initializer_list<ZenithOS::ProgramList::Command>)' being compiled
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSCommandList.hpp(7,17): error C2338: static_assert failed: 'Command list size cannot be greater than the maximum command list size'
+  (compiling source file 'Program1.cpp')
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSCommandList.hpp(9,24): warning C4267: '=': conversion from 'size_t' to 'ZenithOS::int_z', possible loss of data
+  (compiling source file 'Program1.cpp')
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSCommandList.hpp(11,23): error C2676: binary '[': 'std::initializer_list<ZenithOS::ProgramList::Command>' does not define this operator or a conversion to a type acceptable to the predefined operator
+  (compiling source file 'Program1.cpp')
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\Program1.cpp(5,31): error C3615: constexpr function 'ZenithOS::ProgramList::StaticCommandList<1>::StaticCommandList' cannot result in a constant expression
+      C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSCommandList.hpp(5,90):
+      failure was caused by 'constexpr' constructor not initializing member 'ZenithOS::ProgramList::StaticCommandList<1>::commands'
+      C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSCommandList.hpp(5,90):
+      failure was caused by 'constexpr' constructor not initializing member 'ZenithOS::ProgramList::StaticCommandList<1>::actualSize'
+      C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\Program1.cpp(5,31):
+      the call stack of the evaluation (the oldest call first) is
+          C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\Program1.cpp(5,31):
+          while evaluating function 'ZenithOS::ProgramList::StaticCommandList<1>::StaticCommandList(std::initializer_list<ZenithOS::ProgramList::Command>)'
+  
+  Program2.cpp
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.cfg.h(4,9): warning C4005: 'ZenithOS_CommandListSize': macro redefinition
+  (compiling source file 'Program2.cpp')
+      C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\Program2.cpp(2,9):
+      see previous definition of 'ZenithOS_CommandListSize'
+  
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSCommandList.hpp(5,90): warning C4812: obsolete declaration style: please use 'ZenithOS::ProgramList::StaticCommandList<size>::StaticCommandList' instead
+  (compiling source file 'Program2.cpp')
+  
+  VSBuffer.cpp
+C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\VSBuffer.cpp(28,16): warning C4018: '<': signed/unsigned mismatch
   Generating Code...

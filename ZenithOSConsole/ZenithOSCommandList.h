@@ -1,5 +1,6 @@
 #pragma once
 #include "ConsoleToken.h"
+#include "ZenithOSProgramList.cfg.h"
 #include <initializer_list>
 
 namespace ZenithOS {
@@ -10,24 +11,21 @@ namespace ZenithOS {
 			const char* (*function)(ZenithOS::Interpreter::Token*);
 		};
 
-		class CommandList {
-		public:
-			virtual int_z getCommandIndex(const char*) const = 0;
-			virtual const char* getArgumentsList(int_z) const = 0;
-			virtual const char* (*getFunction(int_z) const)(ZenithOS::Interpreter::Token*) = 0;
-		};
-
-		template <int_z size> class StaticCommandList : public CommandList {
+		template <int_z size> class StaticCommandList {
 			Command commands[size];
+			int_z actualSize;
 		public:
 		
 			//template<typename... T, typename = std::enable_if_t<sizeof...(T) == size>> constexpr StaticCommandList(T... values) : commands{ values... } {}
-			template<typename... T, typename = std::enable_if_t<sizeof...(T) == size>> constexpr StaticCommandList(T... values);
+			//template<typename... T, typename = std::enable_if_t<sizeof...(T) == size>> constexpr StaticCommandList(T... values);
 			//StaticCommandList() = default;
-			int_z getCommandIndex(const char*) const override;
-			const char* getArgumentsList(int_z) const override;
-			const char* (*getFunction(int_z) const)(ZenithOS::Interpreter::Token*) override;
+			constexpr StaticCommandList(std::initializer_list<Command>);
+			int_z getCommandIndex(const char*) const;
+			const char* getArgumentsList(int_z) const;
+			const char* (*getFunction(int_z) const)(ZenithOS::Interpreter::Token*);
 		};
+
+		using CommandList = StaticCommandList<ZenithOS_CommandListSize>;
 	}
 }
 
