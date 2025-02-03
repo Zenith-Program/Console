@@ -1,8 +1,5 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (ZenithOSConsole10.vcxproj, ZenithOSConsole11.vcxproj, ZenithOSConsole12.vcxproj, ZenithOSConsole13.vcxproj, ZenithOSConsole14.vcxproj, ZenithOSConsole15.vcxproj, ZenithOSConsole16.vcxproj, ZenithOSConsole17.vcxproj, ZenithOSConsole18.vcxproj, ZenithOSConsole19.vcxproj, ZenithOSConsole20.vcxproj, ZenithOSConsole21.vcxproj, ZenithOSConsole22.vcxproj, ZenithOSConsole23.vcxproj, ZenithOSConsole24.vcxproj, ZenithOSConsole25.vcxproj, ZenithOSConsole.vcxproj, ZenithOSConsole1.vcxproj, ZenithOSConsole2.vcxproj, ZenithOSConsole3.vcxproj, ZenithOSConsole4.vcxproj, ZenithOSConsole5.vcxproj, ZenithOSConsole6.vcxproj, ZenithOSConsole7.vcxproj, ZenithOSConsole8.vcxproj, ZenithOSConsole9.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  ConsoleToken.cpp
   main.cpp
-C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ConsoleToken.cpp(329,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ConsoleToken.cpp(336,22): warning C4018: '<': signed/unsigned mismatch
 C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramListConfigHeader.h(15,31): error C2061: syntax error: identifier 'ProgramCommandList'
   (compiling source file 'main.cpp')
   
@@ -96,15 +93,6 @@ C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\Program1.cpp(
       the call stack of the evaluation (the oldest call first) is
           C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\Program1.cpp(5,31):
           while evaluating function 'ZenithOS::ProgramList::StaticCommandList<1>::StaticCommandList(std::initializer_list<ZenithOS::ProgramList::Command>)'
-  
-  Program2.cpp
-C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSProgramList.cfg.h(4,9): warning C4005: 'ZenithOS_CommandListSize': macro redefinition
-  (compiling source file 'Program2.cpp')
-      C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\Program2.cpp(2,9):
-      see previous definition of 'ZenithOS_CommandListSize'
-  
-C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\ZenithOSCommandList.hpp(5,90): warning C4812: obsolete declaration style: please use 'ZenithOS::ProgramList::StaticCommandList<size>::StaticCommandList' instead
-  (compiling source file 'Program2.cpp')
   
   VSBuffer.cpp
 C:\Users\natha\source\repos\Zenith-Program\Console\ZenithOSConsole\VSBuffer.cpp(28,16): warning C4018: '<': signed/unsigned mismatch
