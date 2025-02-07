@@ -14,7 +14,7 @@ Startup() {
 Loop() {
 	std::cout << "This is the loop of program 0" << std::endl;
 }
-
+//test comment
 Shutdown() {
 	std::cout << "End of program 0" << std::endl;
 	return 0;
